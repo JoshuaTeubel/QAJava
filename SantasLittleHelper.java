@@ -15,7 +15,7 @@
  	static double iToyCost1;
  	static double iToyCost2;
  	static String iAge;
- 	staic  double discout = .2;
+ 	staic  double discount = .2;
  	static Double cTax = 0.07;
  	static Double cTotTax;
  	static Double cSubTotal;
@@ -94,17 +94,19 @@
  		cSubTotal = iToyCost1 + iToyCost2;
 		
 		// discount added
- 		double subDiscount = cSubtotal - (cSubTotal * discout);
+ 		double subDiscount = cSubtotal - (cSubTotal * discount);
  		cTotTax = subDiscount * cTax;
  		cTotal = cSubTotal + cTotTax;
  	}
  	
  	public static void output() {
+ 		String oDisc
  		oToyCost1 = dfDouble4v2.format(iToyCost1);
  		oToyCost2 = dfDouble4v2.format(iToyCost2);
  		oSubTotal = dfDouble4v2.format(cSubTotal);
  		oTotTax = dfDouble4v2.format(cTotTax);
  		oTotal = dfDouble4v2.format(cTotal);
+ 		oDisc = dfDouble4v2.format(subDiscount);
  		
  		System.out.println("\nThank you for shopping with us " + iFName + " " + iLName + ".");
  		System.out.println(" ");
@@ -115,6 +117,7 @@
  		System.out.println("Second toy: " + iToy2);
  		System.out.println("Second price: $" + oToyCost2);
  		System.out.println("Subtotal: $" + oSubTotal);
+ 		System.out.println("20% Discount: " + oDisc);
  		System.out.println("Total tax: $" + oTotTax);
  		System.out.println("Total Bill: $" + oTotal + "\n");
  		System.out.println("Merry Christmas!!!");
