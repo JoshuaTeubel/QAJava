@@ -15,6 +15,7 @@
  	static double iToyCost1;
  	static double iToyCost2;
  	static String iAge;
+ 	staic  double discout = .2;
  	static Double cTax = 0.07;
  	static Double cTotTax;
  	static Double cSubTotal;
@@ -91,7 +92,10 @@
  	
  	public static void calcs() {
  		cSubTotal = iToyCost1 + iToyCost2;
- 		cTotTax = cSubTotal * cTax;
+		
+		// discount added
+ 		double subDiscount = cSubtotal - (cSubTotal * discout);
+ 		cTotTax = subDiscount * cTax;
  		cTotal = cSubTotal + cTotTax;
  	}
  	
